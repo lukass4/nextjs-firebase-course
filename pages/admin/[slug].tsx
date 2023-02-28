@@ -25,7 +25,7 @@ function PostManager() {
 	const router = useRouter();
 	const { slug }: any = router.query;
 
-	const postRef = firestore
+	const postRef:any = firestore
 		.collection("users")
 		.doc(auth.currentUser.uid)
 		.collection("posts")
@@ -68,7 +68,7 @@ function PostForm({ defaultValues, postRef, preview }: any) {
 		watch,
 		formState,
 		formState: { errors },
-	} = useForm({
+	}:any = useForm({
 		defaultValues,
 		mode: "onChange",
 	});
