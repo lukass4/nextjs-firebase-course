@@ -27,7 +27,7 @@ function PostManager() {
 
 	const postRef:any = firestore
 		.collection("users")
-		.doc(auth.currentUser.uid)
+		.doc(auth.currentUser?.uid)
 		.collection("posts")
 		.doc(slug);
 	const [post] = useDocumentData(postRef);
